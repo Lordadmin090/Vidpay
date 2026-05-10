@@ -1,0 +1,13 @@
+{
+  "name": "Vidpay",
+  "short_name": "Vidpay",
+  "description": "Watch premium clips and earn rewards.",
+  "start_url": "/Vidpay/",
+  "scope": "/Vidpay/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "any",
+  "categories": ["finance", "entertainment"],
+  "icons": []
+}
