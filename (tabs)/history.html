@@ -1,5 +1,9 @@
-<!DOCTYPE html><html  lang="en"><head><title data-rh="true"></title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, viewport-fit=cover"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><style id="expo-reset">#root,body,html{height:100%}body{overflow:hidden}#root{display:flex}</style><style id="vidpay-root-viewport">
-              html { height: 100%; }
+<!DOCTYPE html><html  lang="en"><head><title data-rh="true"></title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover, shrink-to-fit=no"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><style id="expo-reset">#root,body,html{height:100%}body{overflow:hidden}#root{display:flex}</style><style id="vidpay-root-viewport">
+              html {
+                height: 100%;
+                touch-action: manipulation;
+                -webkit-text-size-adjust: 100%;
+              }
               body {
                 margin: 0;
                 padding: 0;
@@ -8,8 +12,9 @@
                 min-height: 100dvh;
                 width: 100%;
                 overflow: hidden;
+                overscroll-behavior: none;
+                touch-action: manipulation;
                 background-color: #000000;
-                -webkit-text-size-adjust: 100%;
               }
               #root {
                 display: flex;
@@ -20,6 +25,22 @@
                 width: 100%;
                 max-width: 100%;
                 background-color: #000000;
+                touch-action: manipulation;
+                overscroll-behavior: none;
+              }
+              /* Block selection & iOS long-press callout on app UI (balances, labels, buttons). */
+              #root * {
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                user-select: none;
+              }
+              /* Allow caret typing in fields (RN Web may use contenteditable / textarea). */
+              #root input,
+              #root textarea,
+              #root select,
+              #root [contenteditable="true"] {
+                -webkit-user-select: text;
+                user-select: text;
               }
             </style><style id="react-native-stylesheet">[stylesheet-group="0"]{}
 body{margin:0;}
